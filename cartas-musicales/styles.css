@@ -239,3 +239,55 @@ button {
 .final-message.show {
   opacity: 1;
 }
+
+/* AJUSTE PARA CELULARES */
+@media (max-width: 500px) {
+
+  .burst {
+    width: 90px;
+    height: 90px;
+  }
+
+  .top.show {
+    transform: translate(-50%, -170%) scale(1) rotate(360deg);
+  }
+
+  .bottom.show {
+    transform: translate(-50%, 70%) scale(1) rotate(360deg);
+  }
+
+  .left.show {
+    transform: translate(-170%, -50%) scale(1) rotate(360deg);
+  }
+
+  .right.show {
+    transform: translate(70%, -50%) scale(1) rotate(360deg);
+  }
+
+  .top-right.show {
+    transform: translate(60%, -140%) scale(1) rotate(360deg);
+  }
+
+  .top-left.show {
+    transform: translate(-140%, -140%) scale(1) rotate(360deg);
+  }
+
+  .bottom-right.show {
+    transform: translate(60%, 60%) scale(1) rotate(360deg);
+  }
+
+  .bottom-left.show {
+    transform: translate(-140%, 60%) scale(1) rotate(360deg);
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .center-box {
+    width: 90px;
+    height: 90px;
+    font-size: 30px;
+  }
+
+}
