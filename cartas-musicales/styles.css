@@ -303,14 +303,14 @@ button {
 
 /* SOBRE */
 
-.envelope{
-  width:260px;
-  height:160px;
-  background:#b36fd8;
-  border-radius:10px;
-  position:relative;
-  cursor:pointer;
-   overflow:hidden; /* IMPORTANTE */
+.envelope {
+  width: 260px;
+  height: 160px;
+  background: #b36fd8;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  overflow: visible; /* ← CAMBIO CLAVE */
 }
 
 /* TAPA */
@@ -330,23 +330,22 @@ button {
 
 /* CARTA */
 
-.letter{
-  position:absolute;
-  left:50%;
-  bottom:-280px; /* empieza completamente dentro del sobre */
-  transform:translateX(-50%);
-  width:90%;
-  height:280px;
-  background:white;
-  border-radius:12px;
-  padding:20px;
-  box-shadow:0 10px 20px rgba(0,0,0,.2);
-  overflow-y:auto;
-
-  opacity:0;
-  pointer-events:none;
-
-  transition:bottom .6s ease, opacity .3s;
+.letter {
+  position: absolute;
+  left: 50%;
+  bottom: -280px;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 280px;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,.2);
+  overflow-y: auto;
+  opacity: 0;
+  pointer-events: none;
+  transition: bottom .6s ease, opacity .3s;
+  z-index: 2;
 }
 
 /* TEXTO */
@@ -370,12 +369,14 @@ button {
   transform:rotateX(180deg);
 }
 
-.envelope.open .letter{
-  bottom:-40px; /* sale justo debajo del triángulo */
-  opacity:1;
-  pointer-events:auto;
-  z-index:5;
+.envelope.open .letter {
+  bottom: calc(-280px + 96px); /* 160px × 60% = 96px = base del triángulo */
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 5;
 }
+
+
 /* quitar fondo del card */
 
 #card-10 .card-content{
