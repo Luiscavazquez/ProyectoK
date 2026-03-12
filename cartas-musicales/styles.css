@@ -324,7 +324,7 @@ button {
   clip-path:polygon(0 0,100% 0,50% 60%);
   transform-origin:top;
   transition:transform .5s;
-  z-index:2;
+  z-index:1;
 }
 
 /* CARTA */
@@ -373,6 +373,7 @@ button {
   transform:translate(-50%, -10%);
   opacity:1;
   pointer-events:auto;
+  z-index:5;
 }
 
 /* quitar fondo del card */
