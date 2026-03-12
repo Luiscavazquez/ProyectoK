@@ -11,6 +11,7 @@ const card6 = document.getElementById('card-6');
 const card7 = document.getElementById('card-7');
 const card8 = document.getElementById('card-8');
 const card9 = document.getElementById('card-9');
+const card10 = document.getElementById('card-10');
 function stopCardMedia(card) {
   if (!card) return;
   const audio = card.querySelector('.audio');
@@ -91,7 +92,8 @@ document.addEventListener('click', (e) => {
     else if (currentCard.id === "card-5") goToCard(card5, card6);
     else if (currentCard.id === "card-6") goToCard(card6, card7);
     else if (currentCard.id === "card-7") goToCard(card7, card8);
-     else if (currentCard.id === "card-8") goToCard(card8, card9);
+    else if (currentCard.id === "card-8") goToCard(card8, card9);
+    else if (currentCard.id === "card-9") goToCard(card9, card10);
   }
 });
 
