@@ -340,13 +340,13 @@ button {
   z-index:2;
 }
 
-/* CARTA (ESCONDIDA DENTRO DEL SOBRE) */
+/* CARTA ESCONDIDA */
 
 .letter{
   position:absolute;
-  bottom:0;
   left:50%;
-  transform:translateX(-50%) translateY(100%);
+  bottom:-220px; /* empieza completamente escondida */
+  transform:translateX(-50%);
   width:90%;
   height:220px;
   background:white;
@@ -354,7 +354,7 @@ button {
   padding:20px;
   box-shadow:0 10px 25px rgba(0,0,0,0.2);
   overflow-y:auto;
-  transition:transform 0.6s ease;
+  transition:bottom 0.6s ease;
 }
 
 /* CONTENIDO */
@@ -380,11 +380,13 @@ button {
 }
 
 .envelope.open .letter{
-  transform:translateX(-50%) translateY(-60%);
+  bottom:40px;
 }
 
+/* QUITAR FONDO DEL CARD SOLO EN ESTA CARD */
+
 #card-10 .card-content{
-  background: transparent;
-  box-shadow: none;
-  padding: 0;
+  background:transparent;
+  box-shadow:none;
+  padding:0;
 }
