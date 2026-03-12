@@ -370,7 +370,7 @@ button {
 }
 
 .envelope.open .letter {
-  bottom: calc(-280px + 96px); /* 160px × 60% = 96px = base del triángulo */
+  bottom: calc(-280px + 130px); /* antes era 96px, ahora 130px */
   opacity: 1;
   pointer-events: auto;
   z-index: 5;
