@@ -332,8 +332,8 @@ button {
 .letter{
   position:absolute;
   left:50%;
-  top:100%;
-  transform:translateX(-50%);
+  top:0;
+  transform:translate(-50%, 250%);
   width:90%;
   height:280px;
   background:white;
@@ -341,7 +341,11 @@ button {
   padding:20px;
   box-shadow:0 10px 20px rgba(0,0,0,.2);
   overflow-y:auto;
-  transition:top .6s;
+
+  opacity:0;              /* invisible */
+  pointer-events:none;    /* no interactuable */
+
+  transition:transform .6s, opacity .3s;
 }
 
 /* TEXTO */
@@ -366,7 +370,9 @@ button {
 }
 
 .envelope.open .letter{
-  top:-120px;
+  transform:translate(-50%, -40%);
+  opacity:1;
+  pointer-events:auto;
 }
 
 /* quitar fondo del card */
