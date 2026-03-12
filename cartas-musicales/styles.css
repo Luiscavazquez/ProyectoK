@@ -291,3 +291,45 @@ button {
   }
 
 }
+
+/* CARTA OCULTA */
+
+.letter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+
+  transform: scale(0);
+  opacity: 0;
+  transition: all 0.5s ease;
+
+  overflow-y: auto;
+}
+
+/* CARTA ABIERTA */
+
+.letter.open {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* CONTENIDO */
+
+.letter-content {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* BOTON SIGUIENTE */
+
+.letter-next {
+  display: block;
+  margin-left: auto;
+  margin-top: 40px;
+}

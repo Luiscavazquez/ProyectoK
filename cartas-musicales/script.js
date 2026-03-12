@@ -12,6 +12,7 @@ const card7 = document.getElementById('card-7');
 const card8 = document.getElementById('card-8');
 const card9 = document.getElementById('card-9');
 const card10 = document.getElementById('card-10');
+const card11 = document.getElementById('card-11');
 function stopCardMedia(card) {
   if (!card) return;
   const audio = card.querySelector('.audio');
@@ -94,6 +95,7 @@ document.addEventListener('click', (e) => {
     else if (currentCard.id === "card-7") goToCard(card7, card8);
     else if (currentCard.id === "card-8") goToCard(card8, card9);
     else if (currentCard.id === "card-9") goToCard(card9, card10);
+    else if (currentCard.id === "card-10") goToCard(card10, card11);
   }
 });
 
@@ -116,5 +118,14 @@ if (explodeBtn) {
     setTimeout(() => {
       document.getElementById("finalMessage").classList.add("show");
     }, 1200);
+  });
+}
+
+const openLetter = document.getElementById("openLetter");
+const letterBox = document.getElementById("letterBox");
+
+if (openLetter) {
+  openLetter.addEventListener("click", () => {
+    letterBox.classList.add("open");
   });
 }
