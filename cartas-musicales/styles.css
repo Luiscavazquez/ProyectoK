@@ -292,26 +292,6 @@ button {
 
 }
 
-/* CARTA OCULTA */
-
-.letter {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: white;
-  border-radius: 20px;
-  padding: 25px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-
-  transform: scale(0);
-  opacity: 0;
-  transition: all 0.5s ease;
-
-  overflow-y: auto;
-}
-
 /* ESCENA SOBRE */
 
 .envelope-scene{
@@ -330,10 +310,10 @@ button {
   border-radius:10px;
   position:relative;
   cursor:pointer;
-  overflow:visible;
+  overflow:hidden;
 }
 
-/* TAPA */
+/* TAPA DEL SOBRE */
 
 .envelope-lid{
   position:absolute;
@@ -348,13 +328,25 @@ button {
   z-index:3;
 }
 
-/* CARTA */
+/* ICONO DEL SOBRE */
+
+.envelope::after{
+  content:"💌";
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  font-size:40px;
+  z-index:2;
+}
+
+/* CARTA (ESCONDIDA DENTRO DEL SOBRE) */
 
 .letter{
   position:absolute;
   bottom:0;
   left:50%;
-  transform:translateX(-50%) translateY(40%);
+  transform:translateX(-50%) translateY(100%);
   width:90%;
   height:220px;
   background:white;
@@ -373,7 +365,7 @@ button {
   text-align:center;
 }
 
-/* BOTON */
+/* BOTÓN */
 
 .letter-next{
   margin-top:20px;
@@ -381,12 +373,12 @@ button {
   margin-left:auto;
 }
 
-/* CUANDO SE ABRE */
+/* ANIMACIÓN AL ABRIR */
 
 .envelope.open .envelope-lid{
   transform:rotateX(180deg);
 }
 
 .envelope.open .letter{
-  transform:translateX(-50%) translateY(-120%);
+  transform:translateX(-50%) translateY(-60%);
 }
