@@ -345,13 +345,13 @@ button {
 .letter{
   position:absolute;
   left:50%;
-  bottom:-220px; /* empieza completamente escondida */
+  bottom:-260px; /* empieza más abajo escondida */
   transform:translateX(-50%);
-  width:90%;
-  height:220px;
+  width:95%;
+  height:300px; /* más grande */
   background:white;
   border-radius:10px;
-  padding:20px;
+  padding:25px;
   box-shadow:0 10px 25px rgba(0,0,0,0.2);
   overflow-y:auto;
   transition:bottom 0.6s ease;
@@ -380,9 +380,12 @@ button {
 }
 
 .envelope.open .letter{
-  bottom:40px;
+  bottom:100px;
 }
 
+.envelope.open::after{
+  opacity:0;
+}
 /* QUITAR FONDO DEL CARD SOLO EN ESTA CARD */
 
 #card-10 .card-content{
